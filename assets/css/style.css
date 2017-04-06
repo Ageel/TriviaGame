@@ -1,0 +1,21 @@
+body {
+	background-image: url("../images/coding.jpg");
+	
+}
+
+.jumbotron {
+	text-align: center;
+	opacity: .25%;
+	margin-top: 20px;
+}
+
+.centering {
+	/*margin: 20px auto;*/
+	margin-left: 50px;
+}
+.game {
+	background-color: pink;
+	height: 250px;
+	margin: 20px auto;
+
+}
