@@ -71,7 +71,17 @@ function showResult () {
       showResult();
     }
 
-    
+    if (name == "q1" && value == "HTML"){
+    	correct++;
+    }
+    else if (name !=="q1" && value !=="HTML"){
+    	incorrect++;
+    }
+    else {
+    	unanswered++;
+    }
+
+
 
     
 
