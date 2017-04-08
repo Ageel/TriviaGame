@@ -2,6 +2,11 @@ body {
 	background-image: url("../images/coding.jpg");
 	
 }
+button{
+	height: 50px;
+	width: 150px;
+	font-size: 150px;
+}
 
 .jumbotron {
 	text-align: center;
@@ -11,11 +16,25 @@ body {
 
 .centering {
 	/*margin: 20px auto;*/
-	margin-left: 50px;
+	margin-left: 380px;
 }
 .game {
 	background-color: pink;
-	height: 250px;
+	height: 350px;
 	margin: 20px auto;
 
+}
+
+.done {
+	margin-left: 380px;
+}
+
+.result {
+	background-color: white;
+	margin-bottom: 20px;
+}
+
+.time {
+	margin-left: 290px;
+	margin-bottom: 20px;
 }
