@@ -25,6 +25,10 @@ function showResult () {
 	// question1();
 	// question2();
 	// question3();
+	checkAnswers();
+	console.log(correct);
+	console.log(incorrect);
+	console.log(unanswered);
 }
 
     $(".submitAnswersButton").on("click", stop);
@@ -62,6 +66,7 @@ function showResult () {
       showResult();
     }
 
+//Create a function that logs the correct, incorrect and unanswered questions.
 function checkAnswers(){
 	function question1 (){
 	    if (name == "q1" && value == "HTML"){
