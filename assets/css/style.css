@@ -14,7 +14,7 @@ button{
 	margin-top: 20px;
 }
 
-.centering {
+.startNowButton {
 	/*margin: 20px auto;*/
 	margin-left: 380px;
 }
@@ -25,7 +25,7 @@ button{
 
 }
 
-.done {
+.submitAnswersButton {
 	margin-left: 380px;
 }
 
