@@ -1,40 +1,17 @@
 var correct = 0;
 var incorrect = 0;
 var unanswered = 0;
-var number = 20;
+var number = 10;
 var intervalId;
 
 $(".game").hide();
 $(".result").hide();
 
-
 $(".startNowButton").on("click", showTheGame);
 $(".submitAnswersButton").on("click", showResult);
 
-//showTheGame function shows the game section and hides the startNowButton.
-function showTheGame () {
-	$(".game").show();
-	$(".startNowButton").hide();
-	run();
-}
-//showResult function: hides the game section and shows the result section.
-function showResult () {
-	$(".game").hide();
-	$(".result").show();
-	// alert("Another of Erik's instruction");
-	// question1();
-	// question2();
-	// question3();
-	checkAnswers();
-	// console.log(correct);
-	// console.log(incorrect);
-	// console.log(unanswered);
-}
 
-    $(".submitAnswersButton").on("click", stop);
-    $(".submitAnswersButton").on("click", checkAnswers);
-
-    function run() {
+function run() {
       intervalId = setInterval(decrement, 1000);
     }
 
@@ -50,9 +27,9 @@ function showResult () {
 
       //  Once number hits zero...
       if (number === 0) {
-      	alert("Erik said do this")
+      	// alert("Erik said do this")
         //  ...run the showResult function.
-        showResult();
+        stop();
       }
     }
 
@@ -63,16 +40,35 @@ function showResult () {
       //  We just pass the name of the interval
       //  to the clearInterval function.
       clearInterval(intervalId);
-      showResult();
+      // showResult();
     }
+
+    //showTheGame function shows the game section and hides the startNowButton.
+function showTheGame () {
+	$(".game").show();
+	$(".startNowButton").hide();
+	$(".result").hide();
+	run();
+}
+
+function showResult () {
+	$(".game").hide();
+	$(".result").show();
+	checkAnswers();
+	
+}
+
+if ((stop()) || ($(".submitAnswersButton").on("click", stop))) {
+	showResult();
+}
 
 //Create a function that logs the correct, incorrect and unanswered questions.
 function checkAnswers(){
 	function question1 (){
-	    if (name == "q1" && value == "HTML"){
+	    if (name == "q1" && id == "HTML"){
     	correct++;
 	    }
-	    else if (name =="q1" && value !=="HTML"){
+	    else if (name =="q1" && id !=="HTML"){
 	    	incorrect++;
 	    }
 	    else {
@@ -82,10 +78,10 @@ function checkAnswers(){
 	}
 
 	function question2 (){
-	    if (name == "q2" && value == "CSS"){
+	    if (name == "q2" && id == "CSS"){
     	correct++;
 	    }
-	    else if (name =="q2" && value !=="CSS"){
+	    else if (name =="q2" && id !=="CSS"){
 	    	incorrect++;
 	    }
 	    else {
@@ -95,10 +91,10 @@ function checkAnswers(){
 	}
 
 	function question3 (){
-	    if (name == "q3" && value == "CSS"){
+	    if (name == "q3" && id == "CSS"){
     	correct++;
 	    }
-	    else if (name =="q3" && value !=="CSS"){
+	    else if (name =="q3" && id !=="CSS"){
 	    	incorrect++;
 	    }
 	    else {
@@ -111,11 +107,3 @@ function checkAnswers(){
 	question2();
 	question3();
 }
-
-
-console.log(correct);
-console.log(incorrect);
-console.log(unanswered);
-    
-
-
