@@ -135,7 +135,7 @@ function checkAnswers(){
 	// console.log(typeof(incorrect));
 	// console.log(typeof(unanswered));
 	console.log("Correct answers: " + correct);
-	console.log("Inorrect answers: " + incorrect);
+	console.log("Incorrect answers: " + incorrect);
 	console.log("Unanswered answers: " + unanswered);
     
     
