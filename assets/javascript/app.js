@@ -3,6 +3,11 @@ var incorrect = 0;
 var unanswered = 0;
 var number = 20;
 var intervalId;
+function showScore (){
+	$("#correct").text(correct);
+	$("#incorrect").text(incorrect);
+	$("#unanswered").text(unanswered);
+}
 
 $(".game").hide();
 $(".result").hide();
@@ -21,6 +26,7 @@ function showTheGame () {
 function showResult () {
 	$(".game").hide();
 	$(".result").show();
+	showScore();
 
 }
 
@@ -43,7 +49,7 @@ function showResult () {
 
       //  Once number hits zero...
       if (number === 0) {
-      	alert("Erik said do this")
+      	// alert("Erik said do this")
         //  ...run the showResult function.
         showResult();
       }
@@ -118,13 +124,16 @@ function checkAnswers(){
 	console.log("Correct answers: " + correct);
 	console.log("Incorrect answers: "+ incorrect);
 	console.log("Unanswered answers: " + unanswered);
+	$("#correct").text("Correct answers: " + correct);
+	$("#incorrect").text("Incorrect answers: "+ incorrect);
+	$("#unanswered").text("Unanswered answers: " + unanswered);
     
 
 }
 
-	console.log(typeof(correct));
-	console.log(typeof(incorrect));
-	console.log(typeof(unanswered));
+	// console.log(typeof(correct));
+	// console.log(typeof(incorrect));
+	// console.log(typeof(unanswered));
 	console.log("Correct answers: " + correct);
 	console.log("Inorrect answers: " + incorrect);
 	console.log("Unanswered answers: " + unanswered);
