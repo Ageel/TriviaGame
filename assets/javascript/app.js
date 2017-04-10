@@ -124,9 +124,9 @@ function checkAnswers(){
 	console.log("Correct answers: " + correct);
 	console.log("Incorrect answers: "+ incorrect);
 	console.log("Unanswered answers: " + unanswered);
-	$("#correct").text("Correct answers: " + correct);
-	$("#incorrect").text("Incorrect answers: "+ incorrect);
-	$("#unanswered").text("Unanswered answers: " + unanswered);
+	$("#correct").text(correct);
+	$("#incorrect").text(incorrect);
+	$("#unanswered").text(unanswered);
     
 
 }
