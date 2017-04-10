@@ -21,14 +21,7 @@ function showTheGame () {
 function showResult () {
 	$(".game").hide();
 	$(".result").show();
-	// alert("Another of Erik's instruction");
-	// question1();
-	// question2();
-	// question3();
-	checkAnswers();
-	// console.log(correct);
-	// console.log(incorrect);
-	// console.log(unanswered);
+
 }
 
     $(".submitAnswersButton").on("click", stop);
@@ -66,56 +59,76 @@ function showResult () {
       showResult();
     }
 
+// $('input[name=name_of_your_radiobutton]:checked').val();
+$('input[name="q1"]:checked').val();
+
+// if($('input[name="q1"]:checked').val() == "HTML")
 //Create a function that logs the correct, incorrect and unanswered questions.
 function checkAnswers(){
+	
 	function question1 (){
-	    if (name == "q1" && value == "HTML"){
+	    if ($('input[name="q1"]:checked').val() == "HTML"){
     	correct++;
 	    }
-	    else if (name =="q1" && value !=="HTML"){
-	    	incorrect++;
+	    else if ($('input[name="q1"]:checked').val()== undefined){
+	    	unanswered++;
 	    }
 	    else {
-	    	unanswered++;
+	    	incorrect++;
 	    }
 	    // console.log(question1);
 	}
 
 	function question2 (){
-	    if (name == "q2" && value == "CSS"){
+	    if ($('input[name="q2"]:checked').val() == "CSS"){
     	correct++;
 	    }
-	    else if (name =="q2" && value !=="CSS"){
-	    	incorrect++;
+	    else if ($('input[name="q2"]:checked').val()== undefined){
+	    	unanswered++;
 	    }
 	    else {
-	    	unanswered++;
+	    	incorrect++;
 	    }
 	    // console.log(question2);
 	}
 
 	function question3 (){
-	    if (name == "q3" && value == "CSS"){
+	    if ($('input[name="q3"]:checked').val() == "Javascript"){
     	correct++;
 	    }
-	    else if (name =="q3" && value !=="CSS"){
-	    	incorrect++;
+	    else if ($('input[name="q3"]:checked').val()== undefined){
+	    	unanswered++;
 	    }
 	    else {
-	    	unanswered++;
+	    	incorrect++;
 	    }
 	    // console.log(question3);
 	}
 	//call the above question functions.
+	// console.log(typeof(correct));
+	// console.log(typeof(incorrect));
+	// console.log(typeof(unanswered));
+	// console.log($('input[name="q1"]:checked').val());
+	// console.log($('input[name="q2"]:checked').val());
+	// console.log($('input[name="q3"]:checked'));
+	// console.log("not showResult");
 	question1();
 	question2();
 	question3();
+	console.log("Correct answers: " + correct);
+	console.log("Incorrect answers: "+ incorrect);
+	console.log("Unanswered answers: " + unanswered);
+    
+
 }
 
-
-console.log(correct);
-console.log(incorrect);
-console.log(unanswered);
+	console.log(typeof(correct));
+	console.log(typeof(incorrect));
+	console.log(typeof(unanswered));
+	console.log("Correct answers: " + correct);
+	console.log("Inorrect answers: " + incorrect);
+	console.log("Unanswered answers: " + unanswered);
+    
     
 
 
